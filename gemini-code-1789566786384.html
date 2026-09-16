@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REA: Identificación y Manejo de Sesgos en la IA</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Barra de accesibilidad DUA -->
+  <header class="top-bar">
+    <div class="container flex-bar">
+      <h1>REA: Sesgos en la Inteligencia Artificial</h1>
+      <div class="accessibility-controls">
+        <button id="btn-contrast" aria-label="Cambiar a alto contraste">Alto Contraste</button>
+        <button id="btn-font-up" aria-label="Aumentar tamaño de letra">A+</button>
+        <button id="btn-font-down" aria-label="Disminuir tamaño de letra">A-</button>
+        <button id="btn-tts" aria-label="Leer contenido en voz alta">🔊 Escuchar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main-content">
+
+    <!-- Introducción -->
+    <section class="card DUA-representacion">
+      <h2>1. ¿Qué es un Sesgo en la IA?</h2>
+      <p>
+        Los modelos de Inteligencia Artificial aprenden de datos creados por seres humanos. Si estos datos contienen prejuicios, desproporciones o discriminación histórica, la IA replicará y amplificará esos mismos patrones en sus respuestas.
+      </p>
+      <div class="callout-info">
+        <strong>Punto Clave DUA:</strong> El sesgo no es un "error técnico" del algoritmo, es un reflejo de los datos con los que fue entrenado.
+      </div>
+    </section>
+
+    <!-- Tipos de sesgos frecuentes -->
+    <section class="card">
+      <h2>2. Tipos Frecuentes de Sesgos</h2>
+      <div class="grid-2">
+        <div class="type-box">
+          <h3>Sesgo de Representación</h3>
+          <p>Ocurre cuando un grupo específico (por género, raza, geografía) está subrepresentado en los datos de entrenamiento.</p>
+        </div>
+        <div class="type-box">
+          <h3>Sesgo Histórico</h3>
+          <p>Refleja prejuicios del pasado que ya no son aceptables en la sociedad actual, pero siguen presentes en los datos antiguos.</p>
+        </div>
+        <div class="type-box">
+          <h3>Sesgo de Confirmación</h3>
+          <p>La IA tiende a generar respuestas que reafirman las opiniones o prejuicios implícitos en la pregunta del usuario (*prompt*).</p>
+        </div>
+        <div class="type-box">
+          <h3>Sesgo Lingüístico</h3>
+          <p>Predominio de valores y perspectivas anglosajonas debido a la mayor cantidad de datos en idioma inglés.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Caso práctico interactivo (Implicación y Expresión) -->
+    <section class="card DUA-implicacion">
+      <h2>3. Caso Práctico Interactivo</h2>
+      <p>Analiza el siguiente escenario y selecciona la mejor estrategia de mitigación:</p>
+
+      <div class="scenario">
+        <p><strong>Escenario:</strong> Una empresa usa una IA para filtrar currículums. La IA descarta automáticamente al 80% de las candidatas mujeres para puestos de ingeniería técnica.</p>
+      </div>
+
+      <fieldset class="quiz-options">
+        <legend>¿Cuál es la causa raíz y cómo resolverlo?</legend>
+        
+        <label class="option">
+          <input type="radio" name="quiz" value="a">
+          <span>A) Aumentar la velocidad del procesamiento del algoritmo.</span>
+        </label>
+        
+        <label class="option">
+          <input type="radio" name="quiz" value="b">
+          <span>B) Revisar los datos históricos de contratación para balancear la muestra de entrenamiento.</span>
+        </label>
+        
+        <label class="option">
+          <input type="radio" name="quiz" value="c">
+          <span>C) Pedirle a la IA en el prompt que "no sea machista".</span>
+        </label>
+      </fieldset>
+
+      <button id="btn-check-quiz" class="btn-primary">Verificar Respuesta</button>
+      <div id="quiz-feedback" class="feedback" aria-live="polite"></div>
+    </section>
+
+    <!-- Checklist / Guía de Mitigación -->
+    <section class="card">
+      <h2>4. Guía de Verificación de Salidas (Checklist)</h2>
+      <p>Usa esta lista interactiva cada vez que analices una respuesta generada por IA:</p>
+
+      <ul class="checklist">
+        <li>
+          <label>
+            <input type="checkbox"> 
+            <strong>Perspectiva:</strong> ¿La respuesta asume un perfil "por defecto" (género, etnia, clase social)?
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox"> 
+            <strong>Fuentes:</strong> ¿Puedo verificar los datos presentados en fuentes primarias confiables?
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox"> 
+            <strong>Lenguaje:</strong> ¿Incluye términos estereotipados o discriminatorios?
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox"> 
+            <strong>Neutralidad del Prompt:</strong> ¿Mi pregunta condicionó a la IA para dar la respuesta que yo esperaba?
+          </label>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="container footer">
+    <p>Recurso Educativo Abierto (REA) bajo licencia <strong>Creative Commons BY-SA 4.0</strong>.</p>
+    <p>Diseñado con enfoque Accesible DUA (Diseño Universal para el Aprendizaje).</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
